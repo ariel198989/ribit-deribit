@@ -1,0 +1,500 @@
+<html><head><base href="https://finpact.co.il/%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%9E%D7%AA%D7%99-%D7%90%D7%92%D7%99%D7%A2-%D7%9C%D7%A2%D7%A6%D7%9E%D7%90%D7%95%D7%AA-%D7%9B%D7%9C%D7%9B%D7%9C%D7%99%D7%AA/%20%D7%AA%D7%9B%D7%99%D7%9F%20%D7%9C%D7%99%20%D7%93%D7%A3%20%D7%A9%D7%9C%20%D7%94%D7%9E%D7%97%D7%A9%D7%91%D7%95%D7%9F"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מחשבון ריבית דריבית - Finpact</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+  
+  :root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f0f4f8;
+    --text-color: #34495e;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .profile {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-top: 40px;
+    font-size: 2.2em;
+  }
+
+  .calculator, .explanation, .examples {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: var(--box-shadow);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .calculator:hover, .explanation:hover, .examples:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+
+  input[type="number"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+
+  button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+
+  button:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+  }
+
+  button:active {
+    transform: translateY(0);
+  }
+
+  #result {
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 1.2em;
+    background-color: #e8f6f3;
+    border: 2px solid #2ecc71;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .note, .example {
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin: 25px 0;
+    font-size: 1.05em;
+  }
+
+  .note {
+    background-color: #fff3cd;
+    border: 2px solid #ffeeba;
+  }
+
+  .example {
+    background-color: #e8f4fd;
+    border: 2px solid #b8daff;
+  }
+
+  footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 1em;
+    color: #777;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+  }
+
+  .tip-container {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .tip-text {
+    background-color: white;
+    padding: 12px 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    font-weight: 500;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.1s ease;
+  }
+
+  .tip-text:hover {
+    transform: scale(1.05);
+  }
+
+  .tip-content {
+    position: fixed;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    max-width: 300px;
+    text-align: right;
+    display: none;
+    z-index: 1001;
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 25px;
+  }
+
+  .whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+  }
+
+  .whatsapp-button:active {
+    transform: translateY(0);
+  }
+
+  .proverb {
+    font-style: italic;
+    font-weight: 500;
+    color: #2c3e50;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-right: 5px solid var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+    
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo, .profile {
+      margin: 10px 0;
+    }
+    
+    h1 {
+      font-size: 2.2em;
+      text-align: center;
+    }
+
+    .calculator, .explanation, .examples {
+      padding: 25px;
+    }
+
+    .tip-container {
+      position: fixed;
+      top: auto;
+      bottom: 20px;
+      left: 20px;
+      transform: none;
+      flex-direction: row;
+    }
+
+    .tip-content {
+      top: auto;
+      bottom: 100px;
+      left: 20px;
+      transform: none;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img alt="לוגו Finpact, כיתוב בכחול עם סמל של תיק כסף" src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/450948890_790597573226524_8054391302127661590_n.png?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=6jXymu10kKgQ7kNvgFxu6Fr&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYBwTnnJ4wN4PsLZCHKUpdVcbimkZCIt1E4ps4c93ioluw&oe=669CF079" width="300" height="60">
+      </div>
+      <h1>מחשבון ריבית דריבית</h1>
+      <div class="profile">
+        <img alt="תמונת פרופיל של אריאל אוחיון, איש עסקים צעיר עם חיוך רחב" src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/277228552_303197421942064_1038964460876065028_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9fWYRdbkVGEQ7kNvgGq2CI5&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYD-rTJxNKB4U1BCvYP1R7wSRkspVY_ebkN7fMks6czpJg&oe=669D04C1" width="80" height="80">
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="calculator">
+      <h2>הזינו את הנתונים שלכם</h2>
+      <form id="compoundInterestForm">
+        <label for="initialInvestment">סכום התחלתי (בש"ח):</label>
+        <input type="number" id="initialInvestment" required placeholder="למשל: 10000">
+
+        <label for="monthlyContribution">הפקדה חודשית (בש"ח):</label>
+        <input type="number" id="monthlyContribution" required placeholder="למשל: 1000">
+
+        <label for="interestRate">תשואה שנתית צפויה (%):</label>
+        <input type="number" id="interestRate" step="0.1" required placeholder="למשל: 7">
+
+        <label for="investmentPeriod">תקופת ההשקעה (בשנים):</label>
+        <input type="number" id="investmentPeriod" required placeholder="למשל: 30">
+
+        <button type="submit">חשב את הריבית דריבית</button>
+      </form>
+
+      <div id="result"></div>
+    </div>
+
+    <div class="explanation">
+      <h2>מהי "ריבית דריבית"?</h2>
+      <p>ריבית דריבית היא תהליך שבו הרווחים מהשקעה מתווספים לקרן ומייצרים רווחים נוספים. זהו כוח משמעותי בבניית עושר לאורך זמן.</p>
+
+      <div class="proverb">
+        "ריבית דריבית היא הכוח השמיני ביקום." - אלברט איינשטיין
+      </div>
+
+      <h2>פתגמים על ריבית דריבית</h2>
+      <div class="proverb">
+        "מי שמבין ריבית דריבית, מרוויח אותה. מי שלא, משלם אותה." - ג'ון ג'ון בוגל
+      </div>
+      <div class="proverb">
+        "ריבית דריבית היא הדרך הבטוחה ביותר להכפיל את כספך." - בנג'מין פרנקלין
+      </div>
+      <div class="proverb">
+        "הדבר היחיד שמנצח את הזמן הוא ריבית דריבית." - וורן באפט
+      </div>
+
+      <div class="note">
+        <strong>חשוב לזכור:</strong>
+        <ul>
+          <li>ככל שתתחילו להשקיע מוקדם יותר, כך תיהנו יותר מאפקט הריבית דריבית.</li>
+          <li>השקעה סבלנית וארוכת טווח היא המפתח למיקסום התשואות.</li>
+          <li>גיוון תיק ההשקעות יכול לעזור בהפחתת סיכונים ובשיפור התשואות לאורך זמן.</li>
+          <li>חשוב להתייעץ עם יועץ פיננסי מקצועי לגבי אסטרטגיית ההשקעה המתאימה לכם.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="examples">
+      <h2>דוגמאות לחישוב ריבית דריבית</h2>
+
+      <div class="example">
+        <h3>דוגמה 1: השקעה חד פעמית</h3>
+        <p><strong>נתונים:</strong></p>
+        <ul>
+          <li>סכום התחלתי: 100,000 ש"ח</li>
+          <li>תשואה שנתית: 7%</li>
+          <li>תקופת השקעה: 30 שנים</li>
+          <li>ללא הפקדות נוספות</li>
+        </ul>
+        <p><strong>תוצאה:</strong> לאחר 30 שנים, ההשקעה תגדל ל-761,225 ש"ח.</p>
+        <p><strong>הסבר:</strong> זוהי דוגמה קלאסית לכוח הריבית דריבית. השקעה חד פעמית של 100,000 ש"ח הכפילה את עצמה פי 7.6 בתקופה של 30 שנים.</p>
+      </div>
+
+      <div class="example">
+        <h3>דוגמה 2: הפקדות חודשיות קבועות</h3>
+        <p><strong>נתונים:</strong></p>
+        <ul>
+          <li>הפקדה חודשית: 1,000 ש"ח</li>
+          <li>תשואה שנתית: 6%</li>
+          <li>תקופת השקעה: 25 שנים</li>
+          <li>ללא סכום התחלתי</li>
+        </ul>
+        <p><strong>תוצאה:</strong> לאחר 25 שנים, סך החיסכון יגיע ל-767,281 ש"ח.</p>
+        <p><strong>הסבר:</strong> דוגמה זו ממחישה את היתרון של השקעה עקבית לאורך זמן. סך ההפקדות הוא 300,000 ש"ח (1,000 ש"ח * 12 חודשים * 25 שנים), אך הסכום הסופי גדול פי 2.5 מסך ההפקדות בזכות אפקט הריבית דריבית.</p>
+      </div>
+
+      <div class="example">
+        <h3>דוגמה 3: השקעה משולבת</h3>
+        <p><strong>נתונים:</strong></p>
+        <ul>
+          <li>סכום התחלתי: 50,000 ש"ח</li>
+          <li>הפקדה חודשית: 500 ש"ח</li>
+          <li>תשואה שנתית: 8%</li>
+          <li>תקופת השקעה: 20 שנים</li>
+        </ul>
+        <p><strong>תוצאה:</strong> לאחר 20 שנים, סך החיסכון יגיע ל-593,398 ש"ח.</p>
+        <p><strong>הסבר:</strong> דוגמה זו מדגימה את היתרון של שילוב בין השקעה התחלתית והפקדות חודשיות. סך ההשקעה הכולל הוא 170,000 ש"ח (50,000 ש"ח + 500 ש"ח * 12 חודשים * 20 שנים), אך הסכום הסופי גדול פי 3.5 מסך ההשקעה בזכות התשואה הגבוהה יחסית ואפקט הריבית דריבית.</p>
+      </div>
+
+      <p>חשוב לזכור כי דוגמאות אלו הן תיאורטיות ומבוססות על תשואה קבועה, בעוד שבמציאות התשואות משתנות. עם זאת, הן ממחישות את העוצמה של ריבית דריבית לאורך זמן.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2023 כל הזכויות שמורות ל-Finpact</p>
+    <p>לתכנון פיננסי מקיף ומותאם אישית, מומלץ להתייעץ עם יועץ פיננסי מוסמך.</p>
+    <a href="https://wa.me/972545425189" class="whatsapp-button">לפגישה פנסיונית ללא עלות לחץ כאן</a>
+  </footer>
+
+  <div class="tip-container">
+    <div class="tip-text" id="tipText">לטיפ פיננסי<br>לחץ כאן</div>
+  </div>
+  <div class="tip-content" id="tipContent"></div>
+
+  <script>
+    document.getElementById('compoundInterestForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const initialInvestment = parseFloat(document.getElementById('initialInvestment').value);
+      const monthlyContribution = parseFloat(document.getElementById('monthlyContribution').value);
+      const interestRate = parseFloat(document.getElementById('interestRate').value) / 100;
+      const investmentPeriod = parseFloat(document.getElementById('investmentPeriod').value);
+
+      const monthlyRate = interestRate / 12;
+      const numberOfMonths = investmentPeriod * 12;
+
+      const finalAmount = initialInvestment * Math.pow(1 + monthlyRate, numberOfMonths) +
+                          monthlyContribution * (Math.pow(1 + monthlyRate, numberOfMonths) - 1) / monthlyRate;
+
+      const totalContributions = initialInvestment + (monthlyContribution * numberOfMonths);
+      const interestEarned = finalAmount - totalContributions;
+
+      const resultElement = document.getElementById('result');
+      resultElement.innerHTML = `
+        <h3>תוצאות החישוב:</h3>
+        <p>הסכום הסופי לאחר ${investmentPeriod} שנים: <strong>${finalAmount.toLocaleString()} ש"ח</strong></p>
+        <p>סך כל ההפקדות: <strong>${totalContributions.toLocaleString()} ש"ח</strong></p>
+        <p>סך הרווחים מריבית: <strong>${interestEarned.toLocaleString()} ש"ח</strong></p>
+      `;
+      resultElement.style.display = 'none';
+      setTimeout(() => {
+        resultElement.style.display = 'block';
+      }, 10);
+    });
+
+    const tipText = document.getElementById('tipText');
+    const tipContent = document.getElementById('tipContent');
+    let tipVisible = false;
+
+    const financialTips = [
+      "התחילו להשקיע מוקדם ככל האפשר כדי למקסם את אפקט הריבית דריבית.",
+      "הגדילו את ההפקדות החודשיות שלכם ככל שההכנסה שלכם גדלה.",
+      "שקלו להשקיע בקרנות מדד בעלות דמי ניהול נמוכים לטווח ארוך.",
+      "גוונו את תיק ההשקעות שלכם כדי לפזר סיכונים.",
+      "בדקו את התיק שלכם באופן קבוע ובצעו התאמות לפי הצורך.",
+      "הימנעו מלמשוך כספים מההשקעות לטווח ארוך שלכם לפני הזמן.",
+      "למדו על אפשרויות השקעה שונות והתאימו אותן ליעדים שלכם.",
+      "שקלו להשתמש בייעוץ פיננסי מקצועי לבניית אסטרטגיית השקעה.",
+      "זכרו שהשקעה לטווח ארוך יכולה לעזור להתגבר על תנודות שוק קצרות טווח.",
+      "השקיעו בהשכלה פיננסית שלכם כדי לקבל החלטות מושכלות יותר."
+    ];
+
+    function showTip() {
+      const randomTip = financialTips[Math.floor(Math.random() * financialTips.length)];
+      tipContent.textContent = randomTip;
+      tipContent.style.display = 'block';
+      tipVisible = true;
+    }
+
+    function hideTip() {
+      tipContent.style.display = 'none';
+      tipVisible = false;
+    }
+
+    tipText.addEventListener('click', function() {
+      if (!tipVisible) {
+        showTip();
+      } else {
+        hideTip();
+      }
+    });
+  </script>
+</body></html>
